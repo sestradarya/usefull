@@ -127,6 +127,14 @@ table {
   border-spacing: 0;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Sections
      ========================================================================== */
 
@@ -193,7 +201,9 @@ pre {
    */
 
 a {
+  color: inherit;
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
@@ -293,7 +303,6 @@ textarea {
   line-height: 1.15;
   /* 1 */
   margin: 0;
-  /* 2 */
 }
 
 /**
@@ -305,6 +314,26 @@ button,
 input {
   /* 1 */
   overflow: visible;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+sub {
+  vertical-align: baseline;
+}
+
+sup {
+  vertical-align: top;
 }
 
 /**
